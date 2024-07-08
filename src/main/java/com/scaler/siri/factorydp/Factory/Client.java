@@ -6,7 +6,9 @@ import com.scaler.siri.factorydp.Factory.components.menu.Menu;
 public class Client {
     public static void main(String[] args) {
         Flutter flutter = new Flutter();
-        UIFactory uiFactory=  flutter.getUIFactory("Android");
+//        UIFactory uiFactory=  flutter.getUIFactory("Android"); if wrong value passed it throws exception, use Enum instead
+
+        UIFactory uiFactory = flutter.getUIFactory(SupportedPlatform.Windows);
 
         Button button = uiFactory.CreateButton();
         button.changeSize();
